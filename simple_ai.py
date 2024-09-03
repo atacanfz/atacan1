@@ -5,7 +5,7 @@ import numpy as np
 from supremacy import helpers
 
 # This is your team name
-CREATOR = "SimpleAI"
+CREATOR = "Atacan"
 
 
 def tank_ai(tank, info, game_map):
@@ -47,7 +47,8 @@ class PlayerAi:
     def __init__(self):
         self.team = CREATOR  # Mandatory attribute
         self.build_queue = helpers.BuildQueue(
-            ["mine", "tank", "ship", "jet"], cycle=True
+            #["mine", "tank", "ship", "jet"], cycle=True
+            ["mine", "mine", "tank", "ship", "mine", "tank","mine", "tank""jet","tank", "ship", "jet","jet","jet","jet"], cycle=True
         )
 
     def run(self, t: float, dt: float, info: dict, game_map: np.ndarray):
