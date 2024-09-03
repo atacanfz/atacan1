@@ -48,7 +48,7 @@ class PlayerAi:
         self.team = CREATOR  # Mandatory attribute
         self.build_queue = helpers.BuildQueue(
             #["mine", "tank", "ship", "jet"], cycle=True
-            ["mine", "mine", "tank", "ship", "mine", "tank","mine", "tank""jet","tank", "ship", "jet","jet","jet","jet"], cycle=True
+            ["mine", "ship", "ship", "tank",], cycle=False
         )
 
     def run(self, t: float, dt: float, info: dict, game_map: np.ndarray):
